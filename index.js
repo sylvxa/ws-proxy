@@ -1,6 +1,6 @@
-const TARGET = "ws://ws.blahaj.tk:25734";
+const TARGET = process.env.TARGET || 'http://localhost:8080';
 const { WebSocketServer, WebSocket } = require('ws');
-const wss = new WebSocketServer({ port: 8080 });
+const wss = new WebSocketServer({ port: process.env.PORT });
 
 wss.on('connection', function connection(source, req) {
   const ip = req.headers['x-forwarded-for']?.split(',')[0].trim() || req.socket.remoteAddress;
