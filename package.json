@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "ws": "^8.13.0"
+  },
+  "name": "ws-proxy",
+  "version": "1.0.0",
+  "description": "simple websocket proxy, not the best but it works!",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sylvxa",
+    "websocket",
+    "proxy"
+  ],
+  "author": "sylvxa",
+  "license": "ISC"
+}
