@@ -5,7 +5,6 @@ const wss = new WebSocketServer({ port: process.env.PORT });
 wss.on('connection', function connection(source, req) {
   const ip = req.headers['x-forwarded-for']?.split(',')[0].trim() || req.socket.remoteAddress;
   let headers = req.headers;
-  headers['source-ip'] = ip;
   console.log(`New connection from ${ip}`);
   source.dest = new WebSocket(TARGET, {
     headers: headers
